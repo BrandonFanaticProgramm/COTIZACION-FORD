@@ -1,0 +1,161 @@
+* {
+
+    padding: 0;
+
+    margin: 0;
+
+    box-sizing: border-box;
+
+    font-family: "Antenna",Arial,Helvetica,"Microsoft YaHei","微软雅黑","STXihei","华文细黑","SimSun","宋体";
+}
+
+body {
+
+    height: 100vh;
+
+    width: 100%;
+
+    background-color: white;
+}
+
+
+.Cabecera {
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: space-evenly;
+
+    width: 100%;
+
+    background-color: white;
+
+    border: 1px solid red;
+
+    height: 90px;
+}
+
+.logo img {
+
+    height: 35px;
+
+    position: relative;
+
+    top: 30px;
+
+    margin-left: 30px;
+}
+
+.navegacion {
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: space-around;
+
+    width: 80%;
+
+    list-style: none;
+}
+
+.elements-first, .elements-second {
+    
+    display: flex;
+
+    justify-content: space-around;
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
+    margin: auto;
+
+    border: 1px solid green;
+}
+
+
+
+.elements-first li > a {
+
+    margin: 10px;
+
+    text-decoration: none;
+
+    color: #008cba;
+
+    font-size: 20px;
+
+    font-weight: 400;
+
+}
+
+.location {
+
+    color: #008cba;
+
+    font-size: 14px;
+
+    position: relative;
+
+    bottom: 5px;
+}
+
+.drive {
+
+
+    /* TERMINAR */
+
+    font-size: 14px;
+
+    position: static;
+
+}
+
+
+.cotizacion-page {
+
+    display: flex;
+
+    width: 100%;
+
+    background-color: #00095b;
+
+    height: 25vh;
+
+    padding: 40px;
+
+    justify-content: start;
+
+    align-items: center;
+
+    color: white;
+
+    font-size: 30px;
+
+    font-weight: 500;
+
+    line-height: 1.1;
+
+    /* FALTA LA FUENTE  */
+
+}
+
+
+.content {
+
+    width: 100%;
+
+    height: 100vh;
+
+    padding: 90px;
+
+    display: flex;
+
+    flex-direction: row;
+
+    flex-wrap: wrap;
+}
