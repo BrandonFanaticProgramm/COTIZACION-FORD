@@ -31,8 +31,6 @@ body {
 
     background-color: white;
 
-    border: 1px solid red;
-
     height: 90px;
 }
 
@@ -73,8 +71,6 @@ body {
     margin: 0;
 
     margin: auto;
-
-    border: 1px solid green;
 }
 
 
@@ -97,7 +93,7 @@ body {
 
     color: #008cba;
 
-    font-size: 14px;
+    font-size: 20px;
 
     position: relative;
 
