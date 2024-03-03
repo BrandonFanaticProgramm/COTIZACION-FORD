@@ -1,4 +1,4 @@
 # PROYECTO FORD DE PRACTICA
 
 Nuevo proyecto de practica para practicar ```HTML CSS Y JS``` de una manera eficiente.
-Esta es la version 1.0 del proyecto ford
+Esta es la version 1.0 del proyecto ford y con practica inlcuida de git, ***__todo en__conjunto***
