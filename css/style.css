@@ -7,6 +7,22 @@
     box-sizing: border-box;
 
     font-family: "Antenna",Arial,Helvetica,"Microsoft YaHei","微软雅黑","STXihei","华文细黑","SimSun","宋体";
+
+    *:focus{
+
+        outline: none;
+
+        font-family: "Antenna",Arial,Helvetica,"Microsoft YaHei","微软雅黑","STXihei","华文细黑","SimSun","宋体";
+    }
+
+    input:focus {
+
+        border: 2px solid #2d96cd;
+
+        text-indent: 12px;
+
+        font-size: 20px;
+    }
 }
 
 body {
@@ -140,6 +156,9 @@ body {
 
 }
 
+
+/* ESTILO DE LOS FORMULARIOS Y CONTENIDO EN GENERAL*/
+
 .forms {
 
     display: flex;
@@ -155,33 +174,37 @@ body {
     padding: 20px;
 }
 
+
 .forms form {
 
     position: relative;
 
-    bottom: 110px;
+    bottom: -90px;
 
     display: flex;
 
     flex-direction: column;
 
     padding: 12px;
+
+    margin-bottom: 20px;
 }
 
 .forms p {
     
     margin: 10px;
 
-    margin-top: 0;
-
     position: relative;
 
-    bottom: 90px;
+    top: 80px;
 }
+
 
 .forms form > * {
 
-    margin: 5px;
+    height: 4rem;
+
+    width: 120%;
 }
 
 .forms label, strong {
@@ -190,9 +213,13 @@ body {
 
     font-weight: 700;
 
-    font-size: .80rem;
+    line-height: 5;
+}
 
-    line-height: 1.5;
+
+#Btn-Send {
+
+    margin-top: 90px;
 }
 
 .content {
@@ -221,4 +248,49 @@ body {
     flex-direction: column;
 
     padding: 20px;
+}
+
+.form-ciudades {
+
+    text-indent: 12px;
+
+    background-color: #fff;
+
+    border: 2px solid #2d96cd;
+
+    font-size: 15px;
+
+    color: #2d96cd;
+}
+
+
+/* ESTILO DE BOTON DE ENVIAR  */
+
+#Btn-Send{
+
+    background-color: rgb(45, 150, 205);
+
+    color: #fff;
+
+    text-align: center;
+
+    width: 80%;
+
+    margin-left: 3px;
+
+    padding: 20px;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    border-color:rgb(45, 150, 205);
+}
+
+#Btn-Send:hover {
+
+    background-color: #fff;
+
+    border-color: rgb(27, 57, 78);
+
 }

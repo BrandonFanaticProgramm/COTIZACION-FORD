@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,16 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 </head>
+
 <body>
 
-    <header class ="Cabecera">
+    <header class="Cabecera">
 
         <div class="logo">
 
@@ -23,7 +26,7 @@
         </div>
 
         <nav class="navegacion">
-            
+
             <ul class="elements-first">
                 <li>
                     <a href="#">Vehiculos</a>
@@ -46,14 +49,21 @@
                 </li>
             </ul>
 
-            <ul class = "elements-first">
+            <ul class="elements-first">
 
                 <li>
                     <i class="bi bi-geo-alt-fill location"></i><a href="#">Concesonarios</a>
                 </li>
 
                 <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="location drive"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0-18 0"/><path d="M10 12a2 2 0 1 0 4 0a2 2 0 1 0-4 0m2 2v7m-2-9l-6.75-2M14 12l6.75-2"/></g></svg><a href="#">Test Drive</a> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"
+                        class="location drive">
+                        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2">
+                            <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0-18 0" />
+                            <path d="M10 12a2 2 0 1 0 4 0a2 2 0 1 0-4 0m2 2v7m-2-9l-6.75-2M14 12l6.75-2" />
+                        </g>
+                    </svg><a href="#">Test Drive</a>
                 </li>
             </ul>
 
@@ -68,7 +78,7 @@
 
     </div>
 
-    
+
     <main class="content">
 
         <!-- <button class="bot">
@@ -84,21 +94,22 @@
             <form>
 
                 <label for="nombre(s)">Nombre(s)*</label> <br>
-                <input type="text" class="nombres">
+                <input type="text" class="inputForm">
 
                 <label for="apellido(s)">Apellido(s)*</label>
-                <input type="text" class="apellidos">
+                <input type="text" class="inputForm">
 
                 <label for="Email">E-mail*</label>
-                <input type="email" class="email">
+                <input type="email" class="inputForm">
 
                 <label for="Telefono">Telefono*</label>
-                <input type="number" class="Telefono">
+                <input type="text" class="inputForm">
 
 
                 <label for="ciudades">Ciudad*</label>
 
-                <select name="ciudades" class ="form-ciudades">
+                <select name="ciudades" class="form-ciudades">
+                    <option value="seleccion">Seleccionar</option>
                     <option value="Barranquilla">Barranquilla</option>
                     <option value="Bogota">Bogota</option>
                     <option value="Cali">Cali</option>
@@ -116,8 +127,8 @@
                     <option value="Pereira">Pereira</option>
                     <option value="Santa Marta">Santa Marta</option>
                     <option value="Villavicencio">Villavicencio</option>
-                    <option value="seleccion">Seleccionar</option>
                 </select>
+
 
 
                 <label for="Concesonario">Concesonario*</label>
@@ -126,39 +137,39 @@
 
             </form>
 
-            <p>
-                <input type="checkbox">
-
-                He leído y autorizo el tratamiento de mis datos personales de acuerdo con las finalidades indicadas en el aviso de privacidad y <a href="#">a la política de tratamiento de datos personales.</a>
-            </p> 
-
-            
 
             <p>
-
                 <input type="checkbox">
+                He leído y autorizo el tratamiento de mis datos personales de acuerdo con las finalidades indicadas en
+                el aviso de privacidad y <a href="#" class="Terms-conditions">a la política de tratamiento de datos personales.</a>
 
-                He leído y acepto los <a href="#">Términos y Condiciones del sitio web.</a>
             </p>
 
-            <button type="submit">Enviar</button>
+
+            <p>
+                <input type="checkbox" class="checkbox">
+                He leído y acepto los <a href="#" class="Terms-conditions">Términos y Condiciones del sitio web.</a>
+            </p>
+
+
+            <button type="submit" id="Btn-Send">Enviar</button>
 
         </div>
 
     </main>
 
     <div class="Seleccion-Vehiculos">
-            
-        <p class = "label-vehicle">
+
+        <p class="label-vehicle">
 
             <small>
-                
+
                 <strong>¿Qué vehículo quieres cotizar?*</strong>
-            
+
             </small>
         </p>
 
-        <select name="vehiculos" class = "Opciones-Vehiculos">
+        <select name="vehiculos" class="Opciones-Vehiculos">
             <option value="Mustang">Mustang GT Premium</option>
             <option value="Escape">Escape Hibrida</option>
             <option value="Escape-2">Escape EcoBoost</option>
@@ -166,10 +177,10 @@
             <option value="Edge">Edge</option>
             <option value="Edge-2">Edge ST</option>
             <option value="seleccion">Seleccionar</option>
-        
         </select>
+        
     </div>
-    
+
     <div class="searching">
 
         <li>Logo</li><input type="text" class="searching" placeholder="Buscar">
@@ -178,7 +189,7 @@
 
     <div class="information">
 
-        <ul class= "list-items-vehicles">
+        <ul class="list-items-vehicles">
 
             <h3>Vehiculos</h3>
 
@@ -211,7 +222,7 @@
         </ul>
 
         <ul class="list-items-cotizar">
-            
+
             <h3>Cotizar</h3>
 
             <li>
@@ -229,7 +240,7 @@
         </ul>
 
 
-        <ul class = "list-items-posventa">
+        <ul class="list-items-posventa">
 
             <h3>Posventa</h3>
 
@@ -335,7 +346,7 @@
     </div>
 
     <div class="social-media">
-        
+
         <p>Redes Sociales: </p>
 
         <a href="#">Facebook</a>
@@ -352,14 +363,15 @@
 
         <small>
 
-            
+
             <p>Copyright &copy; 2023 Ford Motor Company - Todos los derechos reservados.</p>
-            
+
             <a href="#">Terminos y condiciones</a>
-            
+
         </small>
         <img src="/img/1701093763624.avif" alt="">
     </footer>
-    
+
 </body>
+
 </html>
