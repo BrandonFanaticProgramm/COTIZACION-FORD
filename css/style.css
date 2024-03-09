@@ -1,296 +1,350 @@
 * {
+  padding: 0;
 
-    padding: 0;
+  margin: 0;
 
-    margin: 0;
+  box-sizing: border-box;
 
-    box-sizing: border-box;
+  font-family: "Antenna", Arial, Helvetica, "Microsoft YaHei", "微软雅黑",
+    "STXihei", "华文细黑", "SimSun", "宋体";
 
-    font-family: "Antenna",Arial,Helvetica,"Microsoft YaHei","微软雅黑","STXihei","华文细黑","SimSun","宋体";
+  *:focus {
+    outline: none;
 
-    *:focus{
+    font-family: "Antenna", Arial, Helvetica, "Microsoft YaHei", "微软雅黑",
+      "STXihei", "华文细黑", "SimSun", "宋体";
+  }
 
-        outline: none;
+  .inputForm:focus {
+    border: 2px solid #2d96cd;
 
-        font-family: "Antenna",Arial,Helvetica,"Microsoft YaHei","微软雅黑","STXihei","华文细黑","SimSun","宋体";
-    }
+    text-indent: 12px;
 
-    input:focus {
-
-        border: 2px solid #2d96cd;
-
-        text-indent: 12px;
-
-        font-size: 20px;
-    }
+    font-size: 20px;
+  }
 }
 
 body {
+  height: 100vh;
 
-    height: 100vh;
+  width: 100%;
 
-    width: 100%;
-
-    background-color: white;
+  background-color: white;
 }
 
-
 .Cabecera {
+  display: flex;
 
-    display: flex;
+  flex-direction: row;
 
-    flex-direction: row;
+  justify-content: space-evenly;
 
-    justify-content: space-evenly;
+  width: 100%;
 
-    width: 100%;
+  background-color: white;
 
-    background-color: white;
-
-    height: 90px;
+  height: 90px;
 }
 
 .logo img {
+  height: 35px;
 
-    height: 35px;
+  position: relative;
 
-    position: relative;
+  top: 30px;
 
-    top: 30px;
-
-    margin-left: 30px;
+  margin-left: 30px;
 }
 
 .navegacion {
+  display: flex;
 
-    display: flex;
+  flex-direction: row;
 
-    flex-direction: row;
+  justify-content: space-around;
 
-    justify-content: space-around;
+  width: 80%;
 
-    width: 80%;
-
-    list-style: none;
+  list-style: none;
 }
 
-.elements-first, .elements-second {
-    
-    display: flex;
+.elements-first,
+.elements-second {
+  display: flex;
 
-    justify-content: space-around;
+  justify-content: space-around;
 
-    list-style: none;
+  list-style: none;
 
-    padding: 0;
+  padding: 0;
 
-    margin: 0;
+  margin: 0;
 
-    margin: auto;
+  margin: auto;
 }
-
-
 
 .elements-first li > a {
+  margin: 10px;
 
-    margin: 10px;
+  text-decoration: none;
 
-    text-decoration: none;
+  color: #008cba;
 
-    color: #008cba;
+  font-size: 20px;
 
-    font-size: 20px;
-
-    font-weight: 400;
-
+  font-weight: 400;
 }
 
 .location {
+  color: #008cba;
 
-    color: #008cba;
+  font-size: 20px;
 
-    font-size: 20px;
+  position: relative;
 
-    position: relative;
-
-    bottom: 5px;
+  bottom: 5px;
 }
 
 .drive {
+  /* TERMINAR */
 
+  font-size: 14px;
 
-    /* TERMINAR */
-
-    font-size: 14px;
-
-    position: static;
-
+  position: static;
 }
 
-
 .cotizacion-page {
+  display: flex;
 
-    display: flex;
+  width: 100%;
+
+  background-color: #00095b;
+
+  height: 25vh;
+
+  padding: 40px;
+
+  justify-content: start;
+
+  align-items: center;
+
+  color: white;
+
+  font-size: 30px;
+
+  font-weight: 500;
+
+  line-height: 1.1;
+
+  /* FALTA LA FUENTE  */
+}
+
+/* ESTILO DE LOS FORMULARIOS Y CONTENIDO EN GENERAL*/
+
+.forms {
+  display: flex;
+
+  height: 100vh;
+
+  justify-content: center;
+
+  flex-direction: column;
+
+  margin-left: 40px;
+
+  padding: 20px;
+}
+
+.forms form {
+  position: relative;
+
+  bottom: -90px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 12px;
+
+  margin-bottom: 20px;
+}
+
+.forms p {
+  margin: 10px;
+
+  position: relative;
+
+  top: 80px;
+}
+
+.forms form > * {
+  height: 4rem;
+
+  width: 120%;
+}
+
+.forms label,
+strong {
+  color: #868686;
+
+  font-weight: 700;
+
+  line-height: 5;
+}
+
+#Btn-Send {
+  margin-top: 90px;
+}
+
+.content {
+  width: 100%;
+
+  height: 120vh;
+
+  padding: 90px;
+
+  display: flex;
+
+  flex-direction: row;
+}
+
+.Seleccion-Vehiculos {
+
+  position: relative;
+
+  left: 120px;
+
+  width: 40%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 20px;
+
+  bottom: 260px;
+}
+
+.form-ciudades,
+.Opciones-Vehiculos {
+  text-indent: 12px;
+
+  background-color: #fff;
+
+  border: 2px solid #2d96cd;
+
+  font-size: 15px;
+
+  color: #2d96cd;
+}
+
+/* ESTILOS DE TEXTO DE INFORMACION Y CHECKSBOXES */
+
+.Opciones-Vehiculos {
+  height: 55px;
+}
+
+.text-information {
+  font-weight: 300;
+
+  font-size: 1.3rem;
+
+  .checkbox {
+    accent-color: #2d96cd;
+
+    font-size: 300px;
+  }
+
+  line-height: 1.2;
+
+  color: #868686;
+
+  input[type="checkbox"] {
+    /* Double-sized Checkboxes */
+    -ms-transform: scale(1.5); /* IE */
+    -moz-transform: scale(1.5); /* FF */
+    -webkit-transform: scale(1.5); /* Safari and Chrome */
+    -o-transform: scale(1.5); /* Opera */
+    transform: scale(1.5);
+    padding: 10px;
+    margin-right: 8px;
+  }
+
+  .Terms-conditions {
+
+    text-decoration: none;
+
+    color:rgb(45, 150, 205);
+
+    
+}
+}
+.Terms-conditions:hover {
+  
+    color: #0717a5;
+}
+
+/* ESTILO DE BOTON DE ENVIAR  */
+
+#Btn-Send {
+  background-color: rgb(45, 150, 205);
+
+  color: #fff;
+
+  text-align: center;
+
+  width: 80%;
+
+  margin-left: 3px;
+
+  padding: 20px;
+
+  font-size: 22px;
+
+  cursor: pointer;
+
+  border-color: rgb(45, 150, 205);
+  
+}
+#Btn-Send:hover {
+
+    /* FALTA ANIMACION DEL BOTON Y LA SOMBRA */
+
+  background-color: #fff;
+
+  color: black;
+
+  border-color: rgb(27, 57, 78);
+}
+
+.searching {
 
     width: 100%;
 
-    background-color: #00095b;
+    background:#343434;
 
-    height: 25vh;
+    padding: 30px;
+}
 
-    padding: 40px;
-
-    justify-content: start;
-
-    align-items: center;
+.bi-search {
 
     color: white;
 
     font-size: 30px;
 
-    font-weight: 500;
-
-    line-height: 1.1;
-
-    /* FALTA LA FUENTE  */
-
+    margin-right: 2.5px;
 }
 
+.searching-form {
 
-/* ESTILO DE LOS FORMULARIOS Y CONTENIDO EN GENERAL*/
-
-.forms {
-
-    display: flex;
-
-    height: 100vh;
-
-    justify-content: center;
-
-    flex-direction: column;
-
-    margin-left: 40px;
-
-    padding: 20px;
-}
-
-
-.forms form {
-
-    position: relative;
-
-    bottom: -90px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    padding: 12px;
-
-    margin-bottom: 20px;
-}
-
-.forms p {
-    
-    margin: 10px;
-
-    position: relative;
-
-    top: 80px;
-}
-
-
-.forms form > * {
-
-    height: 4rem;
-
-    width: 120%;
-}
-
-.forms label, strong {
-
-    color: #868686;
-
-    font-weight: 700;
-
-    line-height: 5;
-}
-
-
-#Btn-Send {
-
-    margin-top: 90px;
-}
-
-.content {
-
-    width: 100%;
-
-    height: 100vh;
-
-    padding: 90px;
-
-    display: flex;
-
-    flex-direction: row;
-}
-
-.Seleccion-Vehiculos {
-
-    position: relative;
-
-    left: 120px;
-
-    width: 40%;
-
-    display: flex;
-
-    flex-direction: column;
-
-    padding: 20px;
-}
-
-.form-ciudades {
-
-    text-indent: 12px;
-
-    background-color: #fff;
-
-    border: 2px solid #2d96cd;
-
-    font-size: 15px;
-
-    color: #2d96cd;
-}
-
-
-/* ESTILO DE BOTON DE ENVIAR  */
-
-#Btn-Send{
-
-    background-color: rgb(45, 150, 205);
-
-    color: #fff;
-
-    text-align: center;
-
-    width: 80%;
-
-    margin-left: 3px;
+    background-color: #343434;
 
     padding: 20px;
 
-    font-size: 22px;
+    font-size: 20px;
 
-    cursor: pointer;
+    border:none;
 
-    border-color:rgb(45, 150, 205);
+    color: white;
 }
 
-#Btn-Send:hover {
-
-    background-color: #fff;
-
-    border-color: rgb(27, 57, 78);
-
-}
