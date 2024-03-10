@@ -15,12 +15,15 @@
       "STXihei", "华文细黑", "SimSun", "宋体";
   }
 
-  .inputForm:focus {
-    border: 2px solid #2d96cd;
+  .inputForm {
 
     text-indent: 12px;
 
     font-size: 20px;
+  }
+
+  .inputForm:focus {
+    border: 2px solid #2d96cd;
   }
 }
 
@@ -106,9 +109,8 @@ body {
 }
 
 .drive {
-  /* TERMINAR */
 
-  font-size: 14px;
+  font-size: 27px;
 
   position: static;
 }
@@ -348,3 +350,128 @@ strong {
     color: white;
 }
 
+.information {
+
+    background-color: #1a1919;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-evenly;
+
+    padding-bottom: 110px;
+}
+
+.information > ul {
+
+    margin-top: 30px;
+
+    list-style: none;
+
+    color: white;
+
+    h3 {
+
+        margin-bottom: 12px;
+    }
+}
+
+ul > li > a {
+
+    text-decoration: none;
+
+    line-height: 2;
+
+    color:#868686;
+}
+
+.social-media {
+
+    display: block;
+
+    width: 100%;
+
+    background-color: #1b394e;
+
+    padding: 30px;
+
+    color: white;
+
+    font-weight: 300;
+
+    font-size: 1.4rem;
+}
+
+
+span {
+
+    position: absolute;
+}
+
+
+
+.logo-redes-sociales {
+
+    display: inline;
+    
+    margin-left: 180px;
+}
+
+.footer {
+
+  width: 100%;
+
+  display: flex;
+
+  padding: 5px;
+
+  justify-content: space-around;
+
+  margin-left: 19px;
+
+  align-items: center;
+
+  padding: 40px;
+}
+
+.text-copy {
+
+  color:#868686;
+
+  font-weight: 400;
+
+  font-size: 1.2rem;
+
+  #Terms-text{
+
+    text-decoration: none;
+
+    color: #808080;
+  }
+}
+
+.footer-logo {
+
+  height: 70px;
+}
+
+.assistan-container{
+
+  position: fixed;
+
+  bottom: 10px;
+
+  right: 10px;
+
+  z-index: 1000;
+
+  margin-right: 5px;
+}
+
+.assistan-container img {
+
+  height: auto;
+
+  width: 80px;
+}
