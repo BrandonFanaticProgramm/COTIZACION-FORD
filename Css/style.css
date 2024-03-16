@@ -1,0 +1,391 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Antenna", Arial;
+}
+
+.container {
+  border: 1px solid gray;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.Cabecera {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 70px;
+}
+
+.Cabecera__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 20px;
+  /* border: 2px solid red; */
+  width: 100%;
+}
+
+.Cabecera__left {
+  display: flex;
+  /* border: 1px solid green; */
+  width: 780px;
+  align-items: center;
+  margin-left: 60px;
+}
+
+.Cabecera__left img {
+  height: 53px;
+  margin-top: 20px;
+}
+
+.Cabecera__right {
+  /* border: 2px solid gold; */
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.cotizacion-page {
+  display: flex;
+  width: 100%;
+  background-color: #00095b;
+  height: 195px;
+  padding: 0 0 0 90px;
+  justify-content: start;
+  align-items: center;
+  color: white;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.main {
+  width: 100%;
+  height: 1100px;
+  padding: 35px 60px 90px;
+  display: flex;
+  flex-direction: row;
+  /* border: 2px solid salmon; */
+}
+
+.main__left {
+  /* border: 2px solid rgb(27, 134, 15); */
+  width: 50%;
+  overflow: hidden;
+}
+
+.main__left img {
+  width: 100%;
+}
+
+.Seleccion-Vehiculos {
+  width: 100%;
+}
+.Seleccion-Vehiculos p {
+  margin-top: 15px;
+  margin-left: 15px;
+  font-size: 13px;
+  font-weight: bold;
+  height: 30px;
+  color: #868686;
+}
+
+.Opciones-Vehiculos {
+  position: relative;
+  left: 0;
+  display: block;
+  height: 45px;
+  width: 95%;
+  margin: 0 auto;
+  font-size: 15px;
+  text-indent: 12px;
+  background-color: #fff;
+  color: #a9a9a9;
+  border: 1px solid #b5b5b5;
+}
+
+.main__rigth {
+  width: 50%;
+  /* border: 2px solid rgb(198, 201, 15); */
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  padding: 0px 25px;
+}
+
+.form {
+  /* border: 1px solid rgb(34, 152, 231); */
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.form label {
+  color: #868686;
+  font-weight: 700;
+  margin-bottom: 9px;
+  font-size: 13px;
+  font-weight: bolder;
+}
+.form input,
+select {
+  margin-bottom: 42px;
+  padding: 15px;
+  border: 1px solid gray;
+}
+
+.terminos {
+  /* border: 1px solid grey; */
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.terminos article {
+  display: flex;
+  align-items: start;
+}
+.terminos article p {
+  text-align: justify;
+  font-size: 16px;
+  /* border: 1px solid salmon; */
+  line-height: 20px;
+  color: #343434;
+  width: 510px;
+  display: inline;
+  overflow: wrap;
+}
+
+.terminos article p strong {
+  color: rgb(45, 150, 205);
+  font-weight: 300;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  -webkit-appearance: none;
+
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+#Btn-Send {
+  font-size: 16px;
+  width: 250px;
+  padding: 20px;
+  background-color: rgb(45, 150, 205);
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  margin-left: 10px;
+}
+
+.elements-first,
+.elements-second {
+  display: flex;
+
+  justify-content: space-around;
+
+  list-style: none;
+
+  padding: 0;
+
+  margin: 0;
+
+  margin: auto;
+}
+
+.elements-first li > a {
+  margin: 10px;
+
+  text-decoration: none;
+
+  color: #008cba;
+
+  font-size: 20px;
+
+  font-weight: 400;
+}
+
+.location {
+  color: #008cba;
+
+  font-size: 20px;
+
+  position: relative;
+
+  bottom: 5px;
+}
+
+.drive {
+  font-size: 27px;
+
+  position: static;
+}
+
+/* ESTILO DE LOS FORMULARIOS Y CONTENIDO EN GENERAL*/
+
+/* ESTILO DE BOTON DE ENVIAR  */
+
+#Btn-Send:hover {
+  /* FALTA ANIMACION DEL BOTON Y LA SOMBRA */
+
+  background-color: #fff;
+
+  color: black;
+
+  border-color: rgb(27, 57, 78);
+}
+
+.searching {
+  width: 100%;
+
+  background: #343434;
+
+  padding: 30px;
+}
+
+.bi-search {
+  color: white;
+
+  font-size: 30px;
+
+  margin-right: 2.5px;
+}
+
+.searching-form {
+  background-color: #343434;
+
+  padding: 20px;
+
+  font-size: 20px;
+
+  border: none;
+
+  color: white;
+}
+
+.information {
+  background-color: #1a1919;
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: space-evenly;
+
+  padding-bottom: 110px;
+}
+
+.information > ul {
+  margin-top: 30px;
+
+  list-style: none;
+
+  color: white;
+
+  h3 {
+    margin-bottom: 12px;
+  }
+}
+
+ul > li > a {
+  text-decoration: none;
+
+  line-height: 2;
+
+  color: #868686;
+}
+
+.social-media {
+  display: block;
+
+  width: 100%;
+
+  background-color: #1b394e;
+
+  padding: 30px;
+
+  color: white;
+
+  font-weight: 300;
+
+  font-size: 1.4rem;
+}
+
+span {
+  position: absolute;
+}
+
+.logo-redes-sociales {
+  display: inline;
+
+  margin-left: 180px;
+}
+
+.footer {
+  width: 100%;
+
+  display: flex;
+
+  padding: 5px;
+
+  justify-content: space-around;
+
+  margin-left: 19px;
+
+  align-items: center;
+
+  padding: 40px;
+}
+
+.text-copy {
+  color: #868686;
+
+  font-weight: 400;
+
+  font-size: 1.2rem;
+
+  #Terms-text {
+    text-decoration: none;
+
+    color: #808080;
+  }
+}
+
+.footer-logo {
+  height: 70px;
+}
+
+.assistan-container {
+  position: fixed;
+
+  bottom: 10px;
+
+  right: 10px;
+
+  z-index: 1000;
+
+  margin-right: 5px;
+}
+
+.assistan-container img {
+  height: auto;
+
+  width: 80px;
+}
