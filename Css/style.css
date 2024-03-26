@@ -26,7 +26,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   padding: 0 20px;
-  /* border: 2px solid red; */
+  border: 2px solid red;
   width: 100%;
 }
 
@@ -50,6 +50,11 @@ body {
   justify-content: space-between;
   align-items: center;
   list-style: none;
+}
+
+.Cabecera__right  a {
+
+  color: #008cba;
 }
 
 .cotizacion-page {
