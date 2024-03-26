@@ -52,6 +52,11 @@ body {
   list-style: none;
 }
 
+.Cabecera__right  a {
+
+  color: #008cba;
+}
+
 .cotizacion-page {
   display: flex;
   width: 100%;
