@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  background-color: red;
 }
 
 body {
@@ -225,17 +226,13 @@ input[type="checkbox"] {
 
 .location {
   color: #008cba;
-
   font-size: 20px;
-
   position: relative;
-
   bottom: 5px;
 }
 
 .drive {
   font-size: 27px;
-
   position: static;
 }
 
@@ -388,6 +385,5 @@ span {
 
 .assistan-container img {
   height: auto;
-
   width: 80px;
 }
