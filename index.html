@@ -47,35 +47,33 @@
         <div class="Seleccion-Vehiculos">
           <p class=""><strong>¿Qué vehículo quieres cotizar?*</strong></p>
 
-          <select name="vehiculos" class="Opciones-Vehiculos">
+          <select name="vehiculo" class="Opciones-Vehiculos">
             <option value="seleccion">Seleccionar</option>
             <option value="Escape">Escape Hibrida</option>
             <option value="Escape-2">Escape EcoBoost</option>
             <option value="Bronco">Bronco Sport 4x4</option>
             <option value="Edge">Edge</option>
             <option value="Edge-2">Edge ST</option>
-            <option value="seleccion">Seleccionar</option>
           </select>
         </div>
       </div>
 
       <div class="main__rigth">
-
         <form class="form">
           <label for="nombre(s)">Nombre(s)*</label>
-          <input type="text" class="inputForm" />
+          <input type="text" class="inputForm" required name="Nombre"/>
 
           <label for="apellido(s)">Apellido(s)*</label>
-          <input type="text" class="inputForm" />
+          <input type="text" class="inputForm" required name="Apellido"/>
 
           <label for="Email">E-mail*</label>
-          <input type="email" class="inputForm" />
+          <input type="email" class="inputForm" required name="Email"/>
 
           <label for="Telefono">Telefono*</label>
-          <input type="text" class="inputForm" />
+          <input type="text" class="inputForm" required name="Telefono"/>
 
           <label for="ciudades">Ciudad*</label>
-          <select name="ciudades" class="form-ciudades">
+          <select name="ciudades" class="form-ciudades" required>
             <option value="seleccion">Seleccionar</option>
             <option value="Barranquilla">Barranquilla</option>
             <option value="Bogota">Bogota</option>
@@ -97,21 +95,20 @@
           </select>
 
           <label for="Concesonario">Concesonario*</label>
-
-          <input type="text" class="inputForm" />
+          <input type="text" class="inputForm" required />
         </form>
 
 
         <div class="terminos">
 
           <article class="text-information">
-            <input type="checkbox" class="checkbox" />
+            <input type="checkbox" class="checkbox" required />
             <p>He leído y autorizo el tratamiento de mis datos personales de acuerdo con las finalidades indicadas en el
               aviso de privacidad y a la <strong> política de tratamiento de datos personales.</strong></p>
           </article>
 
           <article class="text-information">
-            <input type="checkbox" class="checkbox" />
+            <input type="checkbox" class="checkbox" required />
             <p>He leído y acepto los <span> Términos y Condiciones del sitio web.</span></p>
           </article>
 
@@ -296,6 +293,7 @@
       <img class="footer-logo" src="Img/1701093763624.avif" alt="" />
     </footer>
   </div>
+  <script src="js/index.js"></script>
 </body>
 
 </html>
