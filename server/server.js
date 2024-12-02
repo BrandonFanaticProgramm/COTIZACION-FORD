@@ -1,27 +1,36 @@
 //SERVER DONDE SE SERVIRAN TODOS LOS DATOS PARA SER INSERTADOS EN LA PAGINA PRINCIPAL
-const conexion = require('./conexion');
 
-conexion.query('SELECT * FROM Vehiculos', (err, results, fields) => {
-    if (err) {
-        console.error('Error al realizar la consulta:', err);
-        return;
-    }
-    console.log('Resultados:', results[0].id_vehiculo);
-    conexion.end();
+const mysql = require('mysql');
+const conexion = mysql.createConnection({
+    host: 'localhost',
+    port: 3306,
+    user: 'root',
+    password: '123456',
+    database: 'Ford_cotizaciones'
 });
 
-const http = require('http');
-const server = http.createServer((req,res) => {
+const express = require('express');
+const app = express();
+const port = 3000;
 
-    res.setHeader('Content-Type', 'text/plain');
-    res.setHeader('Access-Control-Allow-Origin','*');
-    res.status = 200;
-    res.end();
+conexion.connect(err => {
+    if(err) console.log('Error');
+    console.log('Conectado')
+})
+
+app.get('/vehiculos',(req,res) => {
+    conexion.query('SELECT id_vehiculo,nombre FROM Vehiculos', (err, results, fields) => {
+        if (err) {
+            console.error('Error al realizar la consulta:', err);
+            return;
+        }
+
+        res.status(200).json(results);
+        conexion.end();
+    });
+
 });
 
-
-const port = 5000;
-
-server.listen(port,()=> {
-    console.log(`Servidor en puerto ${port}`);
+app.listen(port,()=> {
+    console.log('escuchando en el puerto ', port);
 })
