@@ -49,11 +49,6 @@
 
           <select name="vehiculo" class="Opciones-Vehiculos">
             <option value="seleccion">Seleccionar</option>
-            <option value="Escape">Escape Hibrida</option>
-            <option value="Escape-2">Escape EcoBoost</option>
-            <option value="Bronco">Bronco Sport 4x4</option>
-            <option value="Edge">Edge</option>
-            <option value="Edge-2">Edge ST</option>
           </select>
         </div>
       </div>
@@ -61,60 +56,41 @@
       <div class="main__rigth">
         <form class="form">
           <label for="nombre(s)">Nombre(s)*</label>
-          <input type="text" class="inputForm" required name="Nombre"/>
+          <input type="text" class="inputForm" required name="Nombre" id="Nombre"/>
 
           <label for="apellido(s)">Apellido(s)*</label>
-          <input type="text" class="inputForm" required name="Apellido"/>
+          <input type="text" class="inputForm" required name="Apellido" id="Apellido"/>
 
           <label for="Email">E-mail*</label>
-          <input type="email" class="inputForm" required name="Email"/>
+          <input type="email" class="inputForm" required name="Email" id="Email"/>
 
           <label for="Telefono">Telefono*</label>
-          <input type="text" class="inputForm" required name="Telefono"/>
+          <input type="text" class="inputForm" required name="Telefono" id="Telefono"/>
 
           <label for="ciudades">Ciudad*</label>
           <select name="ciudades" class="form-ciudades" required>
             <option value="seleccion">Seleccionar</option>
-            <option value="Barranquilla">Barranquilla</option>
-            <option value="Bogota">Bogota</option>
-            <option value="Cali">Cali</option>
-            <option value="Valledupar">Valledupar</option>
-            <option value="Bucaramanga">Bucaramanga</option>
-            <option value="Cartagena">Cartagena</option>
-            <option value="Chia">Chia</option>
-            <option value="Cucuta">Cucuta</option>
-            <option value="Ibague">Ibague</option>
-            <option value="Manizales">Manizales</option>
-            <option value="Medellin">Medellina</option>
-            <option value="Monteria">Monteria</option>
-            <option value="Neiva">Neiva</option>
-            <option value="Pasto">Pasto</option>
-            <option value="Pereira">Pereira</option>
-            <option value="Santa Marta">Santa Marta</option>
-            <option value="Villavicencio">Villavicencio</option>
           </select>
 
           <label for="Concesonario">Concesonario*</label>
-          <select name="Concesonario" class="inputForm" >
+          <select name="Concesonario" class="inputForm Concesonario-form" >
+            <option value="seleccion">Seleccionar</option>
           </select>
+          <div class="terminos">
+            <article class="text-information">
+              <input type="checkbox" class="checkbox" required />
+              <p>He leído y autorizo el tratamiento de mis datos personales de acuerdo con las finalidades indicadas en el
+                aviso de privacidad y a la <strong> política de tratamiento de datos personales.</strong></p>
+            </article>
+  
+            <article class="text-information">
+              <input type="checkbox" class="checkbox" required />
+              <p>He leído y acepto los <span> Términos y Condiciones del sitio web.</span></p>
+            </article>  
+          </div>
+          <button type="submit" id="Btn-Send">Enviar</button>
         </form>
 
-        <div class="terminos">
-
-          <article class="text-information">
-            <input type="checkbox" class="checkbox" required />
-            <p>He leído y autorizo el tratamiento de mis datos personales de acuerdo con las finalidades indicadas en el
-              aviso de privacidad y a la <strong> política de tratamiento de datos personales.</strong></p>
-          </article>
-
-          <article class="text-information">
-            <input type="checkbox" class="checkbox" required />
-            <p>He leído y acepto los <span> Términos y Condiciones del sitio web.</span></p>
-          </article>
-
-          <button type="submit" id="Btn-Send">Enviar</button>
-
-        </div>
 
       </div>
     </main>
