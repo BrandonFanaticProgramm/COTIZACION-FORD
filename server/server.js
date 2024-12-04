@@ -11,7 +11,9 @@ const conexion = mysql.createConnection({
 
 const express = require('express');
 const app = express();
-const port = 3000;
+const cors = require('cors')
+const port = 5000;
+app.use(cors());
 
 conexion.connect(err => {
     if(err) console.log('Error');
@@ -26,11 +28,23 @@ app.get('/vehiculos',(req,res) => {
         }
 
         res.status(200).json(results);
-        conexion.end();
     });
 
 });
 
+app.get('/ciudades',(req,res) => {
+    conexion.query('SELECT id_ciudad,nombre FROM Ciudad',(err,results,fields) => {
+        if(err) throw err;
+        res.status(200).json(results);
+    })
+})
+
+app.get('/concesionarios', (req,res) => {
+    conexion.query('SELECT id_concesionario,nombre FROM Concesionario',(err,results,fields) => {
+        if(err) throw err;
+        res.status(200).json(results);
+    })
+})
 app.listen(port,()=> {
     console.log('escuchando en el puerto ', port);
 })
