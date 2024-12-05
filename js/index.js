@@ -61,8 +61,22 @@ form.addEventListener('submit',(e) => {
     const ciudad = document.querySelector('#ciudades');
     const ciudadSeleccionada = ciudad.options[ciudad.selectedIndex].getAttribute('id-ciudad');
     const vehiculo = document.querySelector('#vehiculos');
-    const vehiculoSeleccionado = ciudad.options[vehiculo.selectedIndex].getAttribute('id-vehiculo');
-    console.log(concesionarioSeleccionado);
-    console.log(ciudadSeleccionada);
-    console.log(vehiculoSeleccionado);
+    const vehiculoSeleccionado = vehiculo.options[vehiculo.selectedIndex].getAttribute('id-vehiculo');
+    const formData = {
+        nombre,
+        apellido,
+        email,
+        telefono,
+        concesionarioSeleccionado,
+        ciudadSeleccionada,
+        vehiculoSeleccionado
+    }
+
+    fetch('http://localhost:5000/datos_usuarios', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    });
 });
