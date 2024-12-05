@@ -2,6 +2,8 @@
 const containerVehiculos = document.querySelector('.Opciones-Vehiculos');
 const containerCiudades = document.querySelector('.form-ciudades');
 const containerConcesarios = document.querySelector('.Concesonario-form');
+const form = document.querySelector('.form');
+const btn_send = document.querySelector('#Btn-Send');
 // Vehiculos
 fetch('http://localhost:5000/vehiculos')
     .then(response => response.json()) 
@@ -47,9 +49,6 @@ fetch('http://localhost:5000/concesionarios')
     .catch(err => console.log('Error al obtener concesionarios:', err));
 
 // RECOLECCION DE INFORMACION DEL FORMULARIO
-
-const form = document.querySelector('.form');
-
 form.addEventListener('submit',(e) => {
     e.preventDefault();
     const nombre = document.querySelector('#Nombre').value;
@@ -80,3 +79,10 @@ form.addEventListener('submit',(e) => {
         body: JSON.stringify(formData)
     });
 });
+
+// REENVIO AL PDF
+
+btn_send.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.location.href = 'http://localhost:5000/cotizacion';
+})
