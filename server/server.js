@@ -14,6 +14,7 @@ const app = express();
 const cors = require('cors')
 const port = 5000;
 app.use(cors());
+app.use(express.json());
 
 conexion.connect(err => {
     if(err) console.log('Error');
@@ -44,7 +45,24 @@ app.get('/concesionarios', (req,res) => {
         if(err) throw err;
         res.status(200).json(results);
     })
+});
+
+app.post('/datos_usuarios',(req,res) => {
+    const datos = req.body
+    const {nombre,apellido,email,telefono,concesionarioSeleccionado,ciudadSeleccionada,vehiculoSeleccionado} = datos;
+    const query = `INSERT INTO Usuarios(nombre_usuario, apellido_usuario,email_usuario,telefono,id_ciudad,id_concesionario,id_vehiculo)
+    VALUES(?,?,?,?,?,?,?)`;
+    const values = [nombre, apellido, email, telefono, ciudadSeleccionada, concesionarioSeleccionado,vehiculoSeleccionado];
+    conexion.query(query,values,(err,result) => {
+        if(err) throw err
+        console.log(`Datos insertados ${result}`);
+        res.status(200).send(result);
+    })
+
+
+    
 })
+
 app.listen(port,()=> {
     console.log('escuchando en el puerto ', port);
 })
