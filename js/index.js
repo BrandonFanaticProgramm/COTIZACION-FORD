@@ -49,7 +49,7 @@ fetch('http://localhost:5000/concesionarios')
     .catch(err => console.log('Error al obtener concesionarios:', err));
 
 // RECOLECCION DE INFORMACION DEL FORMULARIO
-form.addEventListener('submit',(e) => {
+form.addEventListener('submit',async(e) => {
     e.preventDefault();
     const nombre = document.querySelector('#Nombre').value;
     const apellido = document.querySelector('#Apellido').value;
@@ -71,18 +71,19 @@ form.addEventListener('submit',(e) => {
         vehiculoSeleccionado
     }
 
-    fetch('http://localhost:5000/datos_usuarios', {
+    const response = await fetch('http://localhost:5000/datos_usuarios', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(formData)
     });
+    const result = await response.json(); 
+    const id_usuario = result.insertId;
+    // REENVIO AL PDF
+    
+    btn_send.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.href = `http://localhost:5000/cotizacion/${id_usuario}`;
+    })
 });
-
-// REENVIO AL PDF
-
-btn_send.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.location.href = 'http://localhost:5000/cotizacion';
-})
