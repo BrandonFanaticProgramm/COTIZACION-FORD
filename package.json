@@ -1,6 +1,18 @@
 {
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
     "mysql": "^2.18.1",
-    "mysql2": "^3.11.4"
-  }
+    "mysql2": "^3.11.4",
+    "pdfkit": "^0.15.1"
+  },
+  "name": "proyecto-ford",
+  "description": "Proyecto Ford de practica, el proyecto contiene algunos bugs en diferentes navegadores con lo cual puede que no se visualize de la manera correcta",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
 }
