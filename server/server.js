@@ -1,13 +1,11 @@
 //SERVER DONDE SE SERVIRAN TODOS LOS DATOS PARA SER INSERTADOS EN LA PAGINA PRINCIPAL
 const { createPdf } = require("./pdf.js");
-import {
-  DB_HOST,
+const {DB_HOST,
   DB_NAME,
   DB_PASSWORD,
   DB_PORT,
   DB_USER,
-  port,
-} from './config.js'
+  port,} = require('./config.js');
 const mysql = require("mysql");
 const conexion = mysql.createConnection({
   host: DB_HOST,
