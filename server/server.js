@@ -1,19 +1,25 @@
 //SERVER DONDE SE SERVIRAN TODOS LOS DATOS PARA SER INSERTADOS EN LA PAGINA PRINCIPAL
 const { createPdf } = require("./pdf.js");
+import {
+  DB_HOST,
+  DB_NAME,
+  DB_PASSWORD,
+  DB_PORT,
+  DB_USER,
+  port,
+} from './config.js'
 const mysql = require("mysql");
 const conexion = mysql.createConnection({
-  host: "localhost",
-  port: 3306,
-  user: "root",
-  password: "123456",
-  database: "Ford_cotizaciones",
+  host: DB_HOST,
+  port: DB_PORT,
+  user: DB_USER,
+  password: DB_PASSWORD,
+  database: DB_NAME,
 });
 
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const { path } = require("pdfkit");
-const port = process.env.PORT || 10000;
 app.use(cors());
 app.use(express.json());
 let id_usuario = "";
