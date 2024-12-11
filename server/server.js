@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname, '../public')))
 let id_usuario = "";
 
 conexion.connect((err) => {
-  if (err) console.log("Error");
+  if (err) console.log("Error conectandose bro");
   console.log("Conectado");
 });
 
