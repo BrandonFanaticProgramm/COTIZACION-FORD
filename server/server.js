@@ -1,5 +1,6 @@
 //SERVER DONDE SE SERVIRAN TODOS LOS DATOS PARA SER INSERTADOS EN LA PAGINA PRINCIPAL
 const { createPdf } = require("./pdf.js");
+const path = require('path');
 const {DB_HOST,
   DB_NAME,
   DB_PASSWORD,
@@ -20,12 +21,17 @@ const app = express();
 const cors = require("cors");
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname, '../public')))
 let id_usuario = "";
 
 conexion.connect((err) => {
   if (err) console.log("Error");
   console.log("Conectado");
 });
+
+app.get('/',(req,res) => {
+  res.sendFile(path.join(__dirname,'../public','index.html'));
+})
 
 app.get("/vehiculos", (req, res) => {
   conexion.query(
