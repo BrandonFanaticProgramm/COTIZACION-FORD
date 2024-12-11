@@ -13,7 +13,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const { path } = require("pdfkit");
-const port = 5000;
+const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 let id_usuario = "";
@@ -92,7 +92,7 @@ app.post("/datos_usuarios", (req, res) => {
 });
 
 app.get("/cotizacion/:id_usuario", (req, res) => {
-  id_usuario = req.params.id_usuario; //SALE UNDEFINED
+  id_usuario = req.params.id_usuario;
   const stream = res.writeHead(200, {
     "Content-Type": "application/pdf",
     "Content-Disposition": "attachment; filename=cotizacion.pdf",
