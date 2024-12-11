@@ -24,9 +24,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '../public')))
 let id_usuario = "";
 
-conexion.connect((err) => {
-  if(!err) console.log("Conectado");
-});
+conexion.connect();
 
 app.get('/',(req,res) => {
   res.sendFile(path.join(__dirname,'../public','index.html'));
