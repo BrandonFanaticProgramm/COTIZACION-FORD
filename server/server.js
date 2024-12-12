@@ -16,6 +16,8 @@ const conexion = mysql.createConnection({
   database: DB_NAME,
 });
 
+console.log('Debug');
+
 const express = require("express");
 const app = express();
 const cors = require("cors");
