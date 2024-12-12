@@ -5,7 +5,7 @@ const containerConcesarios = document.querySelector('.Concesonario-form');
 const form = document.querySelector('.form');
 const btn_send = document.querySelector('#Btn-Send');
 // Vehiculos
-fetch('http://localhost:5000/vehiculos')
+fetch(`/vehiculos`)
     .then(response => response.json()) 
     .then(data => {
         data.forEach(vehiculo => {
@@ -22,7 +22,7 @@ fetch('http://localhost:5000/vehiculos')
     });
 
 //Ciudades
-fetch('http://localhost:5000/ciudades')
+fetch(`/ciudades`)
     .then(response => response.json())
     .then(data => {
         data.forEach(ciudad => {
@@ -35,7 +35,7 @@ fetch('http://localhost:5000/ciudades')
     });
 
 // Concesionarios
-fetch('http://localhost:5000/concesionarios')
+fetch(`/concesionarios`)
     .then(response => response.json())
     .then(data => {
         data.forEach(concesionario => {
@@ -71,7 +71,7 @@ form.addEventListener('submit',async(e) => {
         vehiculoSeleccionado
     }
 
-    const response = await fetch('http://localhost:5000/datos_usuarios', {
+    const response = await fetch(`/datos_usuarios`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -84,6 +84,6 @@ form.addEventListener('submit',async(e) => {
     
     btn_send.addEventListener('click', (e) => {
         e.preventDefault();
-        window.location.href = `http://localhost:5000/cotizacion/${id_usuario}`;
+        window.location.href = `/cotizacion/${id_usuario}`;
     })
 });
