@@ -15,10 +15,10 @@ let id_usuario = "";
 // Crear la conexión utilizando Promesas
 async function conexion() {
   const conexion = await mysql.createConnection({
-    host: DB_HOST,
-    port: DB_PORT,
     user: DB_USER,
     password: DB_PASSWORD,
+    host: DB_HOST,
+    port: DB_PORT,
     database: DB_NAME,
   });
 
