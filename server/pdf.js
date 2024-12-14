@@ -1,8 +1,19 @@
 const PDFDocument = require('pdfkit');
 const doc = new PDFDocument();
+const axios = require('axios');
+const imgUrl = 'https://i.ibb.co/0sDcTQ3/logoford.png'
 
-function createPdf(data, dataCallback, endCallback) {
+
+
+async function createPdf(data, dataCallback, endCallback) {
   // Comprobamos si los datos no están vacíos
+  const response = await axios({
+    url: imageUrl,
+    method: 'GET',
+    responseType: 'arraybuffer'
+  });
+
+  const imgBuffer = Buffer.from(response.data);
   if (!data || data.length === 0) {
     console.error('No se encontraron datos para crear el PDF');
     return;
@@ -18,7 +29,7 @@ function createPdf(data, dataCallback, endCallback) {
   doc.on('end', endCallback);
 
   // Insertar la imagen del logo
-  doc.image('../public/Img/logoford.png', 20, 10, { width: 300 });
+  doc.image(imgBuffer, 20, 10, { width: 300 });
 
   // Centrado de texto
   const centerText = (text, yPosition) => {
