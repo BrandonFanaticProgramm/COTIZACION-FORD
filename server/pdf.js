@@ -2,9 +2,6 @@ const PDFDocument = require('pdfkit');
 const doc = new PDFDocument();
 const axios = require('axios');
 const imgUrl = 'https://i.ibb.co/0sDcTQ3/logoford.png'
-
-
-
 async function createPdf(data, dataCallback, endCallback) {
   // Comprobamos si los datos no están vacíos
   const response = await axios({
