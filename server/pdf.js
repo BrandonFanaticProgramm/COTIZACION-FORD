@@ -8,7 +8,7 @@ const imgUrl = 'https://i.ibb.co/0sDcTQ3/logoford.png'
 async function createPdf(data, dataCallback, endCallback) {
   // Comprobamos si los datos no están vacíos
   const response = await axios({
-    url: imageUrl,
+    url: imgUrl,
     method: 'GET',
     responseType: 'arraybuffer'
   });
