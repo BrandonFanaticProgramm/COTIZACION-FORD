@@ -18,7 +18,7 @@ function createPdf(data, dataCallback, endCallback) {
   doc.on('end', endCallback);
 
   // Insertar la imagen del logo
-  doc.image('/home/user/Escritorio/PROGRAMACION/PROYECTOS/PROYECTO FORD/public/Img/logoford.png', 20, 10, { width: 300 });
+  doc.image('../public/Img/logoford.png', 20, 10, { width: 300 });
 
   // Centrado de texto
   const centerText = (text, yPosition) => {
