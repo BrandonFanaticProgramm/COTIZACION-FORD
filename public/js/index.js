@@ -4,6 +4,15 @@ const containerCiudades = document.querySelector('.form-ciudades');
 const containerConcesarios = document.querySelector('.Concesonario-form');
 const form = document.querySelector('.form');
 const btn_send = document.querySelector('#Btn-Send');
+
+function message(){
+    document.addEventListener('DOMContentLoaded',() => {
+        alert('Por favor al hacer una nueva cotizacion actualizar la pagina, pronto actualizo para que funcione sin necesidad de recargar la pagina. Muchas Gracias');
+    })
+}
+
+message();
+
 // Vehiculos
 fetch(`/vehiculos`)
     .then(response => response.json()) 
