@@ -15,11 +15,11 @@ let id_usuario = "";
 // Crear la conexión utilizando Promesas
 async function conexion() {
   const conexion = await mysql.createConnection({
-    user: 'root',
-    password: '123456',
-    host: 'localhost',
-    port: 3306,
-    database: 'Ford_cotizaciones',
+    user: DB_USER,
+    password: DB_PASSWORD,
+    host: DB_HOST,
+    port: DB_PORT,
+    database: DB_NAME,
   });
   return conexion;
 }
